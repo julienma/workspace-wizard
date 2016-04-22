@@ -30,7 +30,10 @@ That's an Automator app, which just take a `*.itermocil` file as an argument and
             - open .
             - subl .
             - git status
-          - gulp
+          - commands:
+            # Force open a new default browser window
+            - open -n http: ; sleep 0.5 ; open http://www.google.com
+            - gulp
     ```
 
 3. [Download iTermocil.app](https://github.com/julienma/itermocil-launcher/releases/download/v0.1.0/iTermocil-v0.1.0.zip) (the Automator app), and copy it to your `/Applications` folder.
