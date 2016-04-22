@@ -33,7 +33,7 @@ That's an Automator app, which just take a `*.itermocil` file as an argument and
           - gulp
     ```
 
-3. Download iTermocil.app, the Automator app, and copy it to your `/Applications` folder.
+3. [Download iTermocil.app](https://github.com/julienma/itermocil-launcher/releases/download/v0.1.0/iTermocil-v0.1.0.zip) (the Automator app), and copy it to your `/Applications` folder.
 
 4. Associate iTermocil.app with `*.itermocil` files: right-click on your new `whatever.itermocil` file > Get Info > Open with > select `iTermocil.app` > click "Change All".
 
