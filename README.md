@@ -4,7 +4,7 @@
 
 This launcher allows you to run those scripts *without even being* in your terminal. The whole point for iTermocil being to open that terminal for me.
 
-That's an Automator app, which just take a `*.itermocil` file as an argument and run it.
+That's an Automator app, which just take a `*.itermocil` file as an argument, create a new OS X Space, and open the terminal commands thanks to iTermocil.
 
 ## Install
 
@@ -37,7 +37,7 @@ That's an Automator app, which just take a `*.itermocil` file as an argument and
             - gulp
     ```
 
-3. [Download iTermocil.app](https://github.com/julienma/itermocil-launcher/releases/download/v0.1.0/iTermocil-v0.1.0.zip) (the Automator app), and copy it to your `/Applications` folder.
+3. [Download iTermocil.app (terminal-only)](https://github.com/julienma/itermocil-launcher/releases/download/v0.2.0/iTermocil-v0.2.0.zip) or [iTermocil-NewSpace.app (spawn a new OS X Space)](https://github.com/julienma/itermocil-launcher/releases/download/v0.2.0/iTermocil-NewSpace-v0.2.0.zip), and copy it to your `/Applications` folder.
 
 4. Associate iTermocil.app with `*.itermocil` files: right-click on your new `whatever.itermocil` file > Get Info > Open with > select `iTermocil.app` > click "Change All".
 
@@ -45,10 +45,34 @@ That's an Automator app, which just take a `*.itermocil` file as an argument and
 
 Just double-click on any of your `*.itermocil` file, and the script will be run.
 
+If you're using the iTermocil-NewSpace.app, it will also spawn a brand new OS X Space, so all the apps (IDE, Browser, Finder, etc.) related to your project, which will be opened by your iTermocil script, will be grouped together.
+
 ## Create your own Automator app
 
 Open Automator, create a new Application.
-Add a "Run a shell script" step with these parameters:
+
+Add an Applescript step:
+
+```
+on run {input, parameters}
+    tell application "System Events"
+        --mission control starten
+        do shell script "/Applications/Mission\\ Control.app/Contents/MacOS/Mission\\ Control"
+        tell process "Dock"
+            set countSpaces to count buttons of list 1 of group 1
+            --new space
+            click button 1 of group 1
+            --switch to new space
+            repeat until (count buttons of list 1 of group 1) = (countSpaces + 1)
+            end repeat
+            click button (countSpaces + 1) of list 1 of group 1
+        end tell
+    end tell
+    return input
+end run
+```
+
+Then add a Shell script step with these parameters:
 - shell: `/bin/bash`
 - input: arguments
 - code:
@@ -58,7 +82,7 @@ export PATH=/usr/local/bin:$PATH
 itermocil --layout $1
 ```
 
-Then save as an .app, copy a nice custom icon (like [this one](https://dribbble.com/shots/1343859-iTerm2-Icon)), and profit.
+Finally, save as an .app, copy a nice custom icon (like [this one](https://dribbble.com/shots/1343859-iTerm2-Icon)), and profit.
 
 ---
 
