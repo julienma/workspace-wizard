@@ -91,3 +91,4 @@ Finally, save as an .app, copy a nice custom icon (like [this one](https://dribb
 ## Credits
 
 - iTerm2 Icon by [Dax Hansen](https://dribbble.com/shots/1343859-iTerm2-Icon).
+- AppleScript to open a new Space by [Montaldo](http://stackoverflow.com/a/29176079/1907212).
