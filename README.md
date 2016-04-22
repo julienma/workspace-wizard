@@ -41,6 +41,8 @@ That's an Automator app, which just take a `*.itermocil` file as an argument, cr
 
 4. Associate iTermocil.app with `*.itermocil` files: right-click on your new `whatever.itermocil` file > Get Info > Open with > select `iTermocil.app` > click "Change All".
 
+5. Only if you use **iTermocil-NewSpace.app**, you will need to give it accessibility permissions, as it manipulate Spaces (only create a new one, but still). It should ask for your permission the 1st time you run it. If you missed that notification for some reason, you can manually add the app in the Accessibility list from System Preferences > Security & Privacy > Privacy tab > Accessibility > Click on the lock and enter your password > Click "+" to add a new app > Select iTermocil-NewSpace.app, and boom done.
+
 ## Usage
 
 Just double-click on any of your `*.itermocil` file, and the script will be run.
