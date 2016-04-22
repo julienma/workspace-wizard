@@ -30,9 +30,10 @@ That's an Automator app, which just take a `*.itermocil` file as an argument and
             - open .
             - subl .
             - git status
-          - commands:
             # Force open a new default browser window
-            - open -n http: ; sleep 0.5 ; open http://www.google.com
+            - sleep 2
+            - open -n 'http:' ; sleep 0.5 ; open http://www.google.com
+          - commands:
             - gulp
     ```
 
