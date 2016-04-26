@@ -6,20 +6,26 @@ This launcher allows you to run those scripts *without even being* in your termi
 
 That's an Automator app, which just take a `*.itermocil` file as an argument, create a new OS X Space, and open the terminal commands thanks to iTermocil.
 
+
+
+![itermocil-launcher](itermocil-launcher.gif)
+
+
+
 ## Install
 
 1. [Install iTermocil](https://github.com/TomAnthony/itermocil#installing-itermocil). Make sure it's ok:
 
-    ```sh
+   ```sh
     itermocil --version
     # 0.1.8
-    ```
+   ```
 
 2. [Create an iTermocil layout](https://github.com/TomAnthony/itermocil#examples), and make sure to give it the `.itermocil` extension, instead of the default `.yaml`.
 
     E.g. `whatever.itermocil`:
 
-    ```yaml
+   ```yaml
     # whatever.itermocil: 2 panes, open finder source folder, ST, gulp
     windows:
       - name: sample-two-panes
@@ -35,7 +41,7 @@ That's an Automator app, which just take a `*.itermocil` file as an argument, cr
             - open -n 'http:' ; sleep 0.5 ; open http://www.google.com
           - commands:
             - gulp
-    ```
+   ```
 
 3. [Download iTermocil.app (terminal-only)](https://github.com/julienma/itermocil-launcher/releases/download/v0.2.0/iTermocil-v0.2.0.zip) or [iTermocil-NewSpace.app (spawn a new OS X Space)](https://github.com/julienma/itermocil-launcher/releases/download/v0.2.0/iTermocil-NewSpace-v0.2.0.zip), and copy it to your `/Applications` folder.
 
