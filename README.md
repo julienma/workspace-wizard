@@ -57,6 +57,8 @@ If you're using the iTermocil-NewSpace.app, it will also spawn a brand new OS X 
 
 ## Create your own Automator app
 
+If you don't want to use the provided .app, you can create it yourself from scratch.
+
 Open Automator, create a new Application.
 
 Add an Applescript step:
