@@ -1,12 +1,14 @@
-# iTermocil-launcher
+# Workspace Wizard
 
-> [iTermocil](https://github.com/TomAnthony/itermocil) allows you to setup pre-configured layouts of windows and panes in iTerm2, having each open in a specified directory and execute specified commands. You do this by writing YAML files.
+*See the blog post [Enough Friction to Kill Your Momentum](http://tilyoumake.it/things/momentum).*
 
-This launcher allows you to run those scripts *without even being* in your terminal. The whole point for iTermocil being to open that terminal for me.
+---
 
-That's an Automator app, which just take a `*.itermocil` file as an argument, create a new OS X Space, and open the terminal commands thanks to iTermocil.
+This launcher turns [iTermocil](https://github.com/TomAnthony/itermocil) scripts into clickable shortcuts. This means you can run these scripts *without even being* in your terminal. The whole point for iTermocil being to open that terminal for me.
 
+That's an Automator app, which just takes a `*.itermocil` file as an argument, optionally creates a new OS X Space, and opens the terminal commands thanks to iTermocil.
 
+> iTermocil allows you to setup pre-configured layouts of windows and panes in iTerm2, having each open in a specified directory and execute specified commands. You do this by writing YAML files.
 
 ![itermocil-launcher](itermocil-launcher.gif)
 
