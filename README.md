@@ -10,7 +10,7 @@ That's an Automator app, which just takes a `*.itermocil` file as an argument, o
 
 > iTermocil allows you to setup pre-configured layouts of windows and panes in iTerm2, having each open in a specified directory and execute specified commands. You do this by writing YAML files.
 
-![itermocil-launcher](itermocil-launcher.gif)
+![itermocil-launcher](workspace-wizard.gif)
 
 
 
