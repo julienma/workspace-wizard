@@ -16,11 +16,11 @@ That's an Automator app, which just takes a `*.itermocil` file as an argument, o
 
 ## Install
 
-1. [Install iTermocil](https://github.com/TomAnthony/itermocil#installing-itermocil). Make sure it's ok:
+1. [Install iTermocil](https://github.com/TomAnthony/itermocil#installing-itermocil). Make sure you use at least v0.2.1:
 
    ```sh
     itermocil --version
-    # 0.1.8
+    # 0.2.1
    ```
 
 2. [Create an iTermocil layout](https://github.com/TomAnthony/itermocil#examples), and make sure to give it the `.itermocil` extension, instead of the default `.yaml`.
